@@ -1,5 +1,5 @@
 FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu16.04
-LABEL version="0.2"
+LABEL version="1.0"
 LABEL description="Desktop version of nvidia:cuda docker container, make it easier to build a multi-person Shared GPU server."
 LABEL MAINTAINER hangvane<hangvane1@gmail.com>
 ENV SSH_PORT 22
@@ -38,10 +38,6 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted
   iptables \
   bzip2 \
   command-not-found \
-  python \
-  python-pip \
-  python3 \
-  python3-pip \
 #
 # download & install miniconda
 #

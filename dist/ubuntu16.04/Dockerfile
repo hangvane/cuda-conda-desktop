@@ -1,5 +1,5 @@
 FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu16.04
-LABEL MAINTAINER hangvane <hangvane1@gmail.com>
+LABEL MAINTAINER "hangvane <hangvane1@gmail.com>"
 ARG RELEASE_NAME=xenial
 ARG ROOT_PASSWD=123456
 ENV SSH_PORT 22
@@ -42,7 +42,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ release-name-security main rest
 #
 # download & install miniconda
 #
-&& wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+&& wget -q https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh \
 && bash Miniconda3-latest-Linux-x86_64.sh -b \
 && rm Miniconda3-latest-Linux-x86_64.sh \
 && ln -s /root/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh \

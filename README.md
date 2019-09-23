@@ -13,7 +13,8 @@ This image is the desktop version of nvidia:cuda docker container, make it easie
 
 # Tags
 
-[latest(based on nvidia/cuda:10.1-cudnn7-runtime-ubuntu16.04)](https://github.com/hangvane/cuda-conda-desktop/blob/master/Dockerfile)
+- [ubuntu16.04 (based on nvidia/cuda:10.1-cudnn7-runtime-ubuntu16.04)](https://github.com/hangvane/cuda-conda-desktop/blob/master/dist/ubuntu16.04/Dockerfile)
+- [ubuntu18.04 (based on nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04)](https://github.com/hangvane/cuda-conda-desktop/blob/master/dist/ubuntu18.04/Dockerfile)
 
 # How To Use
 
@@ -87,7 +88,7 @@ conda activate py37
 
 ```bash
 git clone https://github.com/hangvane/cuda-conda-desktop.git
-cd cuda-conda-desktop
+cd cuda-conda-desktop/dist/{tagname}
 docker image build -t cuda-conda-desktop:tagname .
 ```
 
@@ -101,7 +102,8 @@ CUDA是由NVIDIA开发的用于图形处理单元（GPU）上的通用计算的�
 
 # 标签
 
-[latest(基于nvidia/cuda:10.1-cudnn7-runtime-ubuntu16.04)](https://github.com/hangvane/cuda-conda-desktop/blob/master/Dockerfile)
+- [ubuntu16.04 (基于 nvidia/cuda:10.1-cudnn7-runtime-ubuntu16.04)](https://github.com/hangvane/cuda-conda-desktop/blob/master/dist/ubuntu16.04/Dockerfile)
+- [ubuntu18.04 (基于 nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04)](https://github.com/hangvane/cuda-conda-desktop/blob/master/dist/ubuntu18.04/Dockerfile)
 
 # 如何使用
 
@@ -167,18 +169,19 @@ conda activate py37
 - 安装了最新的Miniconda, 附带了一个名为`py37`的conda虚拟环境
 - 将apt源, conda源以及py37的pip源切换到TUNA
 - 删除了在中国大陆连接缓慢的NVIDIA apt源，不影响使用:
-`/etc/apt/sources.list.d/cuda.list` `/etc/apt/sources.list.d/nvidia-ml.list`
+`/etc/apt/sources.list.d/cuda.list`<br />
+`/etc/apt/sources.list.d/nvidia-ml.list`
 - 添加了登录SSH时的欢迎文字
 
 # 自行构建
 
 ```bash
 git clone https://github.com/hangvane/cuda-conda-desktop.git
-cd cuda-conda-desktop
+cd cuda-conda-desktop/dist/{tagname}
 docker image build -t cuda-conda-desktop:tagname .
 ```
 
-# 参考
+# Reference
 
-- <https://mirrors.tuna.tsinghua.edu.cn/>
-- <https://github.com/NVIDIA/nvidia-docker>
+- [https://mirrors.tuna.tsinghua.edu.cn](https://mirrors.tuna.tsinghua.edu.cn)
+- [https://github.com/NVIDIA/nvidia-docker](https://github.com/NVIDIA/nvidia-docker)

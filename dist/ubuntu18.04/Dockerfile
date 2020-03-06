@@ -1,8 +1,9 @@
 FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
-LABEL MAINTAINER "hangvane <hangvane1@gmail.com>"
+LABEL MAINTAINER="hangvane <hangvane1@gmail.com>"
 ARG RELEASE_NAME=bionic
 ARG ROOT_PASSWD=123456
 ENV SSH_PORT 22
+ENV PATH /root/miniconda3/bin:$PATH
 #
 # UTF-8 encoding to support chs characters
 #
